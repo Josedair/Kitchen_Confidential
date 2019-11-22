@@ -38,14 +38,14 @@ public class EnemyAI : MonoBehaviour
     void moveEnemy(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
-        //ool inMotion = true;
+        
 
     }
 
     private void FixedUpdate()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        //Debug.Log(distanceToPlayer);
+      
         if (distanceToPlayer < chaseRange)
         {
             Vector3 direction = player.position - transform.position;
